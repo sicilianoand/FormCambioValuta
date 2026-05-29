@@ -4,6 +4,7 @@ import com.example.currency.UI.Window;
 import com.example.currency.service.CurrencyService;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 
 public class Main {
@@ -12,7 +13,7 @@ public class Main {
             try {
                 new Window(new CurrencyService());
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                JOptionPane.showConfirmDialog(null, "Errore nell'apertura della finestra");
             }
         });
     }
